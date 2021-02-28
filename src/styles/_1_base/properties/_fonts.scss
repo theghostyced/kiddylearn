@@ -4,11 +4,6 @@ body {
     'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--primary-color);
+  background-color: var(--body-color);
   color: var(--white);
-}
-
-h1 {
-  font-family: 'Bubblegum Sans';
-  font-size: 100px;
 }
