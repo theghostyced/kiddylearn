@@ -3,7 +3,6 @@ import Button from '../components/Button'
 import Card from '../components/Card'
 
 import RomanNumerals from '../api/romanNumerals'
-import { ReactComponent as Logo } from '../assets/logo.svg'
 
 const Converter = () => {
   const [romanToNumVal, setRomanToNumVal] = useState(null);
@@ -39,7 +38,7 @@ const Converter = () => {
           <h2 className="card__header">Roman to Number</h2>
           <p className="card__description">Converts roman numerals to numbers</p>
           <div className="card__wrapper">
-            <input className="input" type="text" aria-label="Roman to Number" name="rTN" onChange={handleR2NChange} />
+            <input className="input" type="text" aria-label="Roman to Number" name="rTN" onChange={handleR2NChange} placeholder="XX" />
             <div className="r2n__display">{romanToNumResult}</div>
           </div>
           <Button onClick={handleR2NConversion}>
@@ -51,7 +50,7 @@ const Converter = () => {
           <h2 className="card__header">Numbers to Roman</h2>
           <p className="card__description">Converts numbers to roman numerals</p>
           <div className="card__wrapper">
-            <input className="input" type="text" aria-label="Roman to Number" name="rTN2" onChange={handleN2RChange} />
+            <input className="input" type="text" aria-label="Roman to Number" name="rTN2" onChange={handleN2RChange} placeholder="30" />
             <div className="r2n__display">{numeralToRomanResult}</div>
           </div>
           <Button onClick={handleN2RConversion}>
