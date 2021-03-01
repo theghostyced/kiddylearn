@@ -15,8 +15,11 @@ const romanMap = {
 }
 
 const toRoman = (value) => {
-  let roman;
+  let roman = '';
   let i;
+
+  // TODO: Add a toast notification over here!
+  if (isNaN(value)) return;
 
   for (i in romanMap) {
     const currentValue = romanMap[i];
@@ -37,6 +40,8 @@ const fromRoman = (value) => {
   // on each index
   const arr = value.toUpperCase().split('');
 
+  if (arr.length === 1) return romanMap[arr[0]]
+
   for (let i = 0; i < arr.length; i++) {
     const current = arr[i];
     const currValue = romanMap[current];
@@ -44,12 +49,10 @@ const fromRoman = (value) => {
     const next = arr[i + 1];
     const nextValue = romanMap[next];
 
-    if (nextValue && currValue > nextValue) {
-      sum =  sum + currValue;
-    } else if (currValue < nextValue) {
-      sum = sum - currValue
+    if (currValue < nextValue) {
+      sum = sum - currValue;
     } else {
-      return;
+      sum =  sum + currValue;
     }
   }
 

@@ -5,7 +5,9 @@ const Button = (props) => {
   return (
     <button className={`button ${clsx({
       'button--outline': props.outlined
-    })}`}>
+    })}`}
+    onClick={props.onClick}
+    >
       {props.children}
     </button>
   )

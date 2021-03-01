@@ -1,9 +1,12 @@
+import Converter from "./containers/Converter";
+
 const routes = [
-  // {
-  //   path: '/',
-  //   component: Root,
-  //   exact: true,
-  // },
+  {
+    path: '/convert',
+    component: Converter,
+    exact: true,
+    name: 'Convert'
+  },
 ];
 
 export default routes;
